@@ -20,7 +20,7 @@ spring:
     date-format: yyyy-MM-dd HH:mm:ss  #统一返回日志格式（实际工作用这种方式，统一配置）
     time-zone: Asia/Shanghai  #统一配置json返回日期的时区是当前数据库，当前程序所运行的时区，上海
   application:
-    name: cloud-user-service-hystrix #注册服务的名称
+    name: cloud-user-service-config-lee #注册服务的名称
 
   zipkin:
     base-url: http://localhost:9411/  # 链路追踪的服务器地址
