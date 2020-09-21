@@ -22,13 +22,6 @@ spring:
   application:
     name: cloud-user-service-config-lee #注册服务的名称
 
-  zipkin:
-    base-url: http://localhost:9411/  # 链路追踪的服务器地址
-  sleuth:
-    sampler:
-      probability: 1  #(范围是0-1) 指的是收集数据的比例  采集数据的比例（0-1）
-
-
 mybatis:
     mapper-locations: classpath*:mybatis/mapper/**/*.xml     # 配置两个mapper的映射文件路径，注意单词不要写错了，还有个classpath*不要少些
     configuration:
@@ -39,34 +32,4 @@ logging: #设置日志
   level:
     com.qf.springcloud.dao: debug  #我这里设置的debug级别
 
----
-spring:
-    profiles: pro
-    datasource:
-      url: jdbc:mysql://120.25.223.121/tcmm_db_test?serverTimezone=Asia/Shanghai
 
-logging: #设置日志
-      level:
-        com.qf.springcloud.dao: debug  #我这里设置的debug级别
----
-server:
-  port: 8001
-
-spring:
-  profiles: dev1  #开发环境的下的配置文件
-  datasource:
-    url: jdbc:mysql://120.25.223.121/tcmm_db_test?serverTimezone=Asia/Shanghai
-logging: #设置日志
-  level:
-    com.qf.springcloud.dao: debug  #我这里设置的debug级别
----
-server:
-  port: 8002
-
-spring:
-  profiles: dev2  #开发环境的下的配置文件
-  datasource:
-    url: jdbc:mysql://120.25.223.121/tcmm_db_test?serverTimezone=Asia/Shanghai
-logging: #设置日志
-  level:
-    com.qf.springcloud.dao: debug  #我这里设置的debug级别
